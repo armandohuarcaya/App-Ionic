@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>tarapotofull</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-card><ion-button color="danger" size="small" (click)="atras()"><ion-icon name="rewind"></ion-icon></ion-button>
+  <ion-item >
+    <ion-avatar>
+      <img src="../../../assets/images/tarapoto1.jpg">
+    </ion-avatar>
+    <h2 class="feed_title">{{objeto_feed.titulo}}</h2>
+    <h2 class="feed_data">{{objeto_feed.data}}</h2>
+  </ion-item>
+</ion-card>
+
+<ion-content>
+    <ion-card *ngFor="let user of users">
+ <!-- <ion-list inset>
+  <ion-item *ngFor="let user of users">-->
+    
+      <ion-card-header class="text-center" color="primary">
+      <ion-card-title>{{user.nombreCategoria}}</ion-card-title><br>
+     </ion-card-header><br>
+     
+     <ion-card-content class="texto">
+        <img src="{{user.image}}" width="20px"/><br>
+        {{user.descripcion}}
+      </ion-card-content>
+ <!-- </ion-item>
+  </ion-list>-->
+</ion-card>
+  </ion-content>
+  
